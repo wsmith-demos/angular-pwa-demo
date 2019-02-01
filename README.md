@@ -18,7 +18,8 @@ To test the PWA (and Service Worker) functionality, I like to use the node-http-
 npm install -g http-server
 ```
 Then you can test via:
-```ng build --prod
+```
+ng build --prod
 http-server -c-1 dist/pug-o-doro 
 ```
 
