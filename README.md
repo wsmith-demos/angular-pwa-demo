@@ -9,6 +9,8 @@ Presentation slides are in this repo [here](pwa_presentation_slides.pdf)
 
 ## Development server
 
+First, `npm install` as usual.
+
 To test the basic app, you can use `ng serve` as usual. This won't have the service worker.
 
 To test the PWA (and Service Worker) functionality, I like to use the node-http-server package:
@@ -21,6 +23,12 @@ http-server -c-1 dist/pug-o-doro
 ```
 
 To limit confusion, I recommend testing in a Guest window of Chrome, and check the Update on Reload checkbox, under Applications -> Service Workers 
+
+## Add PWA support to your app
+
+`ng add @angular.pwa`
+
+If things go haywire post-deployment, in `angular.json`, set `serviceWorker: false` and the ngsw will uninstall itself.
 
 ## Files of Interest to PWA's
 
