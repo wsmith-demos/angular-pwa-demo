@@ -20,7 +20,7 @@ npm install -g http-server
 Then you can test via:
 ```
 ng build --prod
-http-server -c-1 dist/pug-o-doro 
+http-server -c-1 dist/angular-pwa-demo/ 
 ```
 
 To limit confusion, I recommend testing in a Guest window of Chrome, and check the Update on Reload checkbox, under Applications -> Service Workers 
