@@ -20,7 +20,7 @@ npm install -g http-server
 Then you can test via:
 ```
 ng build --prod
-http-server -c-1 dist/angular-pwa-demo/ 
+http-server -c-1 dist/pug-o-doro/ 
 ```
 
 To limit confusion, I recommend testing in a Guest window of Chrome, and check the Update on Reload checkbox, under Applications -> Service Workers 
@@ -31,7 +31,11 @@ To limit confusion, I recommend testing in a Guest window of Chrome, and check t
 
 If things go haywire post-deployment, in `angular.json`, set `serviceWorker: false` and the ngsw will uninstall itself.
 
-## Files of Interest to PWA's
+## PWA Debug endpoint
+
+If you're running `http-server` as above, http://127.0.0.1:8080/ngsw/state will give you some exciting information!
+
+## Source Files of Interest to PWA's
 
 Be sure to check out changes to:
 
