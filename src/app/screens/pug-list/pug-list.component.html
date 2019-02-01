@@ -1,0 +1,12 @@
+<div style="text-align: center">
+  <h1 *ngIf="!pugs$.value.length">Complete Pomodoros to earn pugs!</h1>
+  <div *ngFor="let pug of pugs$ | async">
+      <h4><img [src]="pug.img" alt="pug" style="vertical-align: middle"> {{pug.name}}</h4>
+    <mat-divider>
+    </mat-divider>
+  </div>
+  <div *ngIf="pugs$.value.length">
+    <br>
+    <button class="release-btn" mat-raised-button (click)="clearPugs()">Release the Hounds! (Clear Pugs)</button>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<app-pomo-time-display
+  [displayText]="timerService.remainingTime$ | async"
+  [counterProgress]="timerService.counterProgress$ | async"
+></app-pomo-time-display>
+
+<div style="text-align: center">
+  <button mat-raised-button color="primary" (click)="onStartPause()">
+    {{ startPauseLabel }}
+  </button>
+  <button mat-raised-button color="reset" (click)="onReset()">Reset</button>
+</div>
+<p></p>
+<div style="text-align: center" *ngIf="!timerService.isCounting$.value">
+  <mat-divider></mat-divider>
+  <br>
+  <h3>Set Pomodoro Timer:</h3>
+  <mat-button-toggle-group name="timer">
+      <mat-button-toggle mat-raised-button (click)="onSetTime('00:25:00')">25 Minutes</mat-button-toggle>
+      <mat-button-toggle mat-raised-button (click)="onSetTime('00:05:00')">
+        5 Minutes (Short Break)
+      </mat-button-toggle>
+      <mat-button-toggle mat-raised-button (click)="onSetTime('00:15:00')">
+        15 Minutes (Long Break)
+      </mat-button-toggle>
+      <mat-button-toggle mat-raised-button (click)="onSetTime('00:00:05')">5s (Test)</mat-button-toggle>
+  </mat-button-toggle-group>
+
+</div>
+
+<div *ngIf="timerService.endTime && timerService.isCounting$.value">
+  <br />
+  <mat-divider></mat-divider>
+  <h2 style="text-align: center">
+    Timer ends at: {{ timerService.endTime.format('hh:mm:ss') }}
+  </h2>
+</div>

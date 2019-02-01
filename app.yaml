@@ -1,0 +1,12 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+- url: /
+  static_files: pug-o-doro/index.html
+  upload: pug-o-doro/index.html
+- url: /
+  static_dir: pug-o-doro
+
+  # Currently
+  # https://angular-pwa-demo-01302019.appspot.com/home
