@@ -23,11 +23,11 @@ ng build --prod
 http-server -c-1 dist/pug-o-doro/ 
 ```
 
-To limit confusion, I recommend testing in a Guest window of Chrome, and check the Update on Reload checkbox, under Applications -> Service Workers 
+To limit confusion, I recommend testing in a Guest window of Chrome, and check the Update on Reload checkbox, under Applications -> Service Workers in the Dev Tools 
 
 ## Add PWA support to your app
 
-`ng add @angular.pwa`
+`ng add @angular/pwa`
 
 If things go haywire post-deployment, in `angular.json`, set `serviceWorker: false` and the ngsw will uninstall itself.
 
