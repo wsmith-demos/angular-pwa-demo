@@ -3,6 +3,10 @@
 
 PWA Demo app for January, 2019 Angular Seattle Meetup
 
+![Timer Screenshot](timer.png)
+
+![Pugs Earned Screenshot](pugs.png)
+
 Link to presentation YouTube video on https://www.meetup.com, under the Angular Seattle group.
 
 Presentation slides are in this repo [here](pwa_presentation_slides.pdf)
